@@ -72,10 +72,10 @@ public class UestcLogin {
         String targetPageContent = targetPage.asText();
         if(targetPageContent.contains("Invalid")){//验证码无效,重新执行该函数
             count++;
-//            System.err.println("验证码无效------------------------");
+//            System.err.println("验证码无效-------------------------");
             deal(loginURL, targetURL);
         }else {//有效，登录成功后session中就会有用户信息，直接去打卡页面
-//            System.err.println("验证码有效------------------------，共验证次数：" + count);
+//            System.err.println("验证码有效-------------------------，共验证次数：" + count);
             HtmlPage addPage = webClient.getPage(targetURL);
 
             //打卡
